@@ -6,6 +6,14 @@ num = random.randint(2,10)
 for i in range(num):
     lst.append(random.randint(1,100))
 
+print(lst)
+
+for i in range(len(lst)+1):
+    a = lst[i-1]
+    b = lst[i]
+    if (a > b):
+        lst[i-1] = b
+        lst[i] = a
 
 
 print(lst)
