@@ -1,0 +1,12 @@
+#4. Написати програму, яка обчислює суму цифр у заданому числі. Наприклад, для числа (12345) результат має бути (1 + 2 + 3 + 4 + 5 = 15).
+n = int(input("numver? "))
+lst = []
+sum = 0
+while n > 0:
+    a = n % 10
+    lst.append(a)
+    n = n//10
+
+for i in range(len(lst)):
+    sum = sum + lst[i-1]
+print(sum)

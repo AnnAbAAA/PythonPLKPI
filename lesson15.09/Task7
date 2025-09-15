@@ -1,0 +1,21 @@
+#7. Реалізувати програму, яка перевіряє, чи є введене слово паліндромом (читається однаково з обох боків).
+
+a = input("Word? ")
+d = False
+lst =[]
+
+for char in a:
+    lst.append(char)
+
+lst1=[]
+print(lst)
+
+for i in range(len(lst)):
+    lst1.append(lst[-i-1])
+print(lst1)
+
+if(lst == lst1):
+    d = True
+else:
+    d = False
+print(d)
