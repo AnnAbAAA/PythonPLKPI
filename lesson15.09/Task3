@@ -1,19 +1,17 @@
 #3. Реалізувати алгоритм сортування &quot;бульбашкою&quot; для одновимірного масиву, заповненого випадковими числами.
+
 import random
 
-lst=[]
-num = random.randint(2,10)
+lst = []
+num = random.randint(2, 10)
 for i in range(num):
-    lst.append(random.randint(1,100))
+    lst.append(random.randint(1, 100))
 
-print(lst)
+print("Початковий список:", lst)
 
-for i in range(len(lst)+1):
-    a = lst[i-1]
-    b = lst[i]
-    if (a > b):
-        lst[i-1] = b
-        lst[i] = a
+for i in range(len(lst) - 1):
+    for j in range(len(lst) - 1 - i):
+        if lst[j] > lst[j + 1]:
+            lst[j], lst[j + 1] = lst[j + 1], lst[j]
 
-
-print(lst)
+print("Кінцевий список:", lst)
