@@ -1,7 +1,12 @@
 #Вивести всі числа Фібоначчі, що не перевищують (n), де (n) вводить користувач.
 
-n = int(input("n-? "))
-lst = []
+n = int(input("Введіть n: "))
 
-while max(lst) < n:
-    lst.append(0)
+a, b = 0, 1
+lst = []
+while a <= n:
+    lst.append(a)
+    a, b = b, a + b
+
+for i in range(len(lst)):
+    print(lst[i])
