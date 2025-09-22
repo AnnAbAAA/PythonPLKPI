@@ -1,0 +1,22 @@
+#10. Задано масив чисел. Замінити всі від’ємні елементи масиву їхніми
+#квадратами. Якщо в масиві немає від’ємних чисел, вивести повідомлення
+#"Масив не містить від’ємних чисел".
+
+import random
+
+lst=[]
+for i in range(random.randint(4,15)):
+    lst.append(random.randint(-20,20))
+print(lst)
+
+min = False
+
+for i in range(len(lst)):
+    if lst[i] < 0:
+        lst[i] = lst[i] * lst[i]
+        min = True
+
+if min == True:
+    print(lst)
+else:
+    print("Масив не містить від’ємних чисел")
