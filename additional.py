@@ -1,3 +1,6 @@
+#реалізувати процедуру яка повертає століття року введення. Введення завжди має бути 4-значним рядком, якщо ні –
+#повертає 0
+
 a = input("Enter year ")
 
 if len(a) != 4:
@@ -5,8 +8,8 @@ if len(a) != 4:
 else:
     try:
         if(int(a) % 100 == 0):
-           print((int(a)//100))
+           print(str((int(a)//100)) + "th")
         else:
-            print((int(a)//100)+1)
+            print(str((int(a)//100)+1) + "th")
     except:
         print(0)
